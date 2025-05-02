@@ -73,34 +73,30 @@ def obtener_resultado(nombre_local, nombre_visitante, fecha):
                 }
     return None
 
-# Botón para ejecutar consulta directa desde la web
-auto_btn = st.button("🛰️ Consultar resultados automáticamente ahora")
+# 🛰️ Consulta directa desde la nube
+st.markdown("---")
+st.subheader("🛰️ Consulta automática de resultados (vía API)")
+auto_btn = st.button("Consultar resultados automáticamente ahora")
 if auto_btn:
     if os.path.exists("data/resultados.json"):
         with open("data/resultados.json", "r") as f:
             datos = json.load(f)
-
         partidos = datos["partidos"]
         horarios = datos["horarios"]
         actualizados = {}
         ahora = datetime.now()
-
         for clave, horario in horarios.items():
             fecha = horario["fecha"]
             hora_str = horario["hora"][:5]
             hora_fin = datetime.strptime(f"{fecha} {hora_str}", "%Y-%m-%d %H:%M")
-
             if not (hora_fin <= ahora <= hora_fin + timedelta(hours=1)):
                 st.info(f"⏳ {clave}: fuera del rango de comprobación ({hora_fin} +/- 1h)")
                 continue
-
             local, visitante = partidos[clave].split(" vs ")
             local = formatear_equipo(local.strip())
             visitante = formatear_equipo(visitante.strip())
-
             with st.spinner(f"Buscando resultado para {local} vs {visitante}..."):
                 resultado = obtener_resultado(local, visitante, fecha)
-
             if resultado:
                 if clave in ["Real Madrid", "Barcelona"]:
                     es_local = (local == clave)
@@ -119,7 +115,6 @@ if auto_btn:
                 st.success(f"✅ {clave} = {nuevo_resultado}")
             else:
                 st.warning(f"⚠️ Resultado aún no disponible para {clave}.")
-
         if actualizados:
             with open("data/resultados.json", "w") as f:
                 json.dump(datos, f)
@@ -134,3 +129,73 @@ if auto_btn:
             st.info("ℹ️ No se ha actualizado ningún resultado.")
     else:
         st.error("❌ No se encontró el archivo resultados.json. Asegúrate de haber evaluado al menos una jornada.")
+
+# 📝 Sección para configurar partidos y cargar predicciones
+st.markdown("---")
+st.subheader("📅 Selecciona los equipos y horarios de cada partido")
+
+partido_rm_local = st.selectbox("Equipo LOCAL (RM)", equipos_laliga)
+partido_rm_visitante = st.selectbox("Equipo VISITANTE (RM)", equipos_laliga)
+fecha_rm = st.date_input("Fecha del partido (RM)")
+hora_rm = st.time_input("Hora estimada de finalización (RM)")
+
+partido_bar_local = st.selectbox("Equipo LOCAL (BAR)", equipos_laliga)
+partido_bar_visitante = st.selectbox("Equipo VISITANTE (BAR)", equipos_laliga)
+fecha_bar = st.date_input("Fecha del partido (BAR)")
+hora_bar = st.time_input("Hora de finalización (BAR)")
+
+partido_ponf_local = st.selectbox("Equipo LOCAL (Ponfe)", equipos_primera_federacion)
+partido_ponf_visitante = st.selectbox("Equipo VISITANTE (Ponfe)", equipos_primera_federacion)
+fecha_ponf = st.date_input("Fecha del partido (Ponfe)")
+hora_ponf = st.time_input("Hora estimada de finalización (Ponfe)")
+
+archivo_excel = st.file_uploader("📤 Sube el archivo Excel con las predicciones", type=["xlsx"])
+
+if archivo_excel:
+    try:
+        df = pd.read_excel(archivo_excel)
+        st.success("✅ Archivo cargado correctamente.")
+        st.subheader("🔍 Vista previa de las predicciones:")
+        st.dataframe(df, use_container_width=True)
+
+        st.subheader("🎯 Introduce los resultados reales")
+        resultado_rm = st.text_input(f"Resultado {partido_rm_local} vs {partido_rm_visitante} (ej: 2-1)")
+        resultado_bar = st.text_input(f"Resultado {partido_bar_local} vs {partido_bar_visitante} (ej: 1-0)")
+        resultado_ponf = st.selectbox(f"Resultado {partido_ponf_local} vs {partido_ponf_visitante}", ["", "1", "X", "2"])
+
+        if st.button("Evaluar porra"):
+            try:
+                df.to_excel("data/predicciones.xlsx", index=False)
+
+                resultados = {
+                    "Real Madrid": resultado_rm,
+                    "Barcelona": resultado_bar,
+                    "Ponferradina": resultado_ponf
+                }
+                partidos = {
+                    "Real Madrid": f"{partido_rm_local} vs {partido_rm_visitante}",
+                    "Barcelona": f"{partido_bar_local} vs {partido_bar_visitante}",
+                    "Ponferradina": f"{partido_ponf_local} vs {partido_ponf_visitante}"
+                }
+                horarios = {
+                    "Real Madrid": {"fecha": str(fecha_rm), "hora": str(hora_rm)},
+                    "Barcelona": {"fecha": str(fecha_bar), "hora": str(hora_bar)},
+                    "Ponferradina": {"fecha": str(fecha_ponf), "hora": str(hora_ponf)}
+                }
+
+                with open("data/resultados.json", "w") as f:
+                    json.dump({"resultados": resultados, "partidos": partidos, "horarios": horarios}, f)
+
+                df_filtrado = df.copy()
+                for clave, resultado in resultados.items():
+                    df_filtrado = df_filtrado[df_filtrado[clave].astype(str) == resultado]
+
+                df_filtrado.astype(str).to_csv("data/supervivientes.csv", index=False)
+
+                st.success("🏆 Evaluación completada. ¡Suerte a todos!")
+            except Exception as e:
+                st.error(f"❌ Error al evaluar la porra: {e}")
+    except Exception as e:
+        st.error(f"❌ Error al leer el archivo: {e}")
+else:
+    st.info("🔔 Para evaluar la porra, primero sube un archivo Excel.")
