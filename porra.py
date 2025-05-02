@@ -134,18 +134,27 @@ if auto_btn:
 st.markdown("---")
 st.subheader("📅 Selecciona los equipos y horarios de cada partido")
 
-partido_rm_local = st.selectbox("Equipo LOCAL (RM)", equipos_laliga)
-partido_rm_visitante = st.selectbox("Equipo VISITANTE (RM)", equipos_laliga)
+col1, col2 = st.columns(2)
+with col1:
+    partido_rm_local = st.selectbox("🏠 Local (RM)", equipos_laliga)
+with col2:
+    partido_rm_visitante = st.selectbox("🚗 Visitante (RM)", equipos_laliga)
 fecha_rm = st.date_input("Fecha del partido (RM)")
 hora_rm = st.time_input("Hora estimada de finalización (RM)")
 
-partido_bar_local = st.selectbox("Equipo LOCAL (BAR)", equipos_laliga)
-partido_bar_visitante = st.selectbox("Equipo VISITANTE (BAR)", equipos_laliga)
+col3, col4 = st.columns(2)
+with col3:
+    partido_bar_local = st.selectbox("🏠 Local (BAR)", equipos_laliga)
+with col4:
+    partido_bar_visitante = st.selectbox("🚗 Visitante (BAR)", equipos_laliga)
 fecha_bar = st.date_input("Fecha del partido (BAR)")
 hora_bar = st.time_input("Hora de finalización (BAR)")
 
-partido_ponf_local = st.selectbox("Equipo LOCAL (Ponfe)", equipos_primera_federacion)
-partido_ponf_visitante = st.selectbox("Equipo VISITANTE (Ponfe)", equipos_primera_federacion)
+col5, col6 = st.columns(2)
+with col5:
+    partido_ponf_local = st.selectbox("🏠 Local (Ponfe)", equipos_primera_federacion)
+with col6:
+    partido_ponf_visitante = st.selectbox("🚗 Visitante (Ponfe)", equipos_primera_federacion)
 fecha_ponf = st.date_input("Fecha del partido (Ponfe)")
 hora_ponf = st.time_input("Hora estimada de finalización (Ponfe)")
 
