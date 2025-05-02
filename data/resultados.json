@@ -1,8 +1,8 @@
 {
     "partidos": {
-        "Real Madrid": "Real Madrid vs Atl\u00e9tico",
-        "Barcelona": "Barcelona vs Villarreal",
-        "Ponferradina": "Ponferradina vs Cultural Leonesa"
+        "Real Madrid": "Real Madrid vs Osasuna",
+        "Barcelona": "Atl\u00e9tico vs Barcelona",
+        "Ponferradina": "Ponferradina vs Zamora"
     },
     "horarios": {
         "Real Madrid": {
@@ -10,7 +10,7 @@
             "hora": "18:00"
         },
         "Barcelona": {
-            "fecha": "2025-05-03",
+            "fecha": "2025-05-04",
             "hora": "18:00"
         },
         "Ponferradina": {
