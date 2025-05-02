@@ -1,1 +1,26 @@
-{"partidos": {"Real Madrid": "Real Madrid vs Celta", "Barcelona": "Real Valladolid vs Barcelona", "Ponferradina": "Ponferradina vs Bilbao Athletic"}, "resultados": {"Real Madrid": "", "Barcelona": "", "Ponferradina": ""}, "horarios": {"Real Madrid": {"fecha": "2025-05-03", "hora": "23:00:00"}, "Barcelona": {"fecha": "2025-05-03", "hora": "21:45:00"}, "Ponferradina": {"fecha": "2025-05-03", "hora": "20:00:00"}}}
+{
+    "partidos": {
+        "Real Madrid": "Real Madrid vs Atl\u00e9tico",
+        "Barcelona": "Barcelona vs Villarreal",
+        "Ponferradina": "Ponferradina vs Cultural Leonesa"
+    },
+    "horarios": {
+        "Real Madrid": {
+            "fecha": "2025-05-03",
+            "hora": "18:00"
+        },
+        "Barcelona": {
+            "fecha": "2025-05-03",
+            "hora": "18:00"
+        },
+        "Ponferradina": {
+            "fecha": "2025-05-03",
+            "hora": "18:00"
+        }
+    },
+    "resultados": {
+        "Real Madrid": "",
+        "Barcelona": "",
+        "Ponferradina": ""
+    }
+}
