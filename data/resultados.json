@@ -1,8 +1,8 @@
 {
     "partidos": {
-        "Real Madrid": "Real Madrid vs Osasuna",
-        "Barcelona": "Atl\u00e9tico vs Barcelona",
-        "Ponferradina": "Ponferradina vs Zamora"
+        "Real Madrid": "Real Madrid vs Atl\u00e9tico",
+        "Barcelona": "Barcelona vs Atl\u00e9tico",
+        "Ponferradina": "Ponferradina vs Andorra"
     },
     "horarios": {
         "Real Madrid": {
