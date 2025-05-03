@@ -4,18 +4,17 @@ import json
 import os
 
 st.set_page_config(page_title="Porra Futbolera", page_icon="⚽", layout="centered")
-declaracion_css_ocultar = """
+hide_streamlit_style = """
     <style>
         #MainMenu {visibility: hidden;}
         footer {visibility: hidden;}
         header {visibility: hidden;}
+        button[kind="header"] {display: none !important;}
+        .st-emotion-cache-zq5wmm, .st-emotion-cache-1avcm0n, .css-1lsmgbg, .css-eczf16 {display: none !important;}
     </style>
 """
-
 import streamlit as st
-st.markdown(declaracion_css_ocultar, unsafe_allow_html=True)
-
-st.title("👥 Participantes - Porra Futbolera")
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 # Leer resultados y supervivientes
 try:
