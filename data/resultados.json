@@ -1,7 +1,7 @@
 {
     "partidos": {
         "Real Madrid": "Real Madrid vs Celta",
-        "Barcelona": "Real Valladolid vs Barcelona",
+        "Barcelona": "Real Valladolid vs Real Valladolid",
         "Ponferradina": "Ponferradina vs Bilbao Athletic"
     },
     "horarios": {
@@ -15,7 +15,7 @@
         },
         "Ponferradina": {
             "fecha": "2025-05-03",
-            "hora": "19:10"
+            "hora": "19:24"
         }
     },
     "resultados": {
