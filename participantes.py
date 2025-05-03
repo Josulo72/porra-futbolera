@@ -4,6 +4,16 @@ import json
 import os
 
 st.set_page_config(page_title="Porra Futbolera", page_icon="⚽", layout="centered")
+declaracion_css_ocultar = """
+    <style>
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+        header {visibility: hidden;}
+    </style>
+"""
+
+import streamlit as st
+st.markdown(declaracion_css_ocultar, unsafe_allow_html=True)
 
 st.title("👥 Participantes - Porra Futbolera")
 
