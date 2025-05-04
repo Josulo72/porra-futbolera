@@ -10,16 +10,16 @@
             "hora": "16:00"
         },
         "Barcelona": {
-            "fecha": "2025-05-04",
+            "fecha": "2025-05-03",
             "hora": "23:00"
         },
         "Ponferradina": {
-            "fecha": "2025-05-04",
+            "fecha": "2025-05-03",
             "hora": "16:00"
         }
     },
     "resultados": {
-        "Real Madrid": "3-2",
+        "Real Madrid": "",
         "Barcelona": "1-2",
         "Ponferradina": "1"
     }
