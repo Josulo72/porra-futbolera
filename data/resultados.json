@@ -1,8 +1,8 @@
 {
     "partidos": {
-        "Real Madrid": "Real Madrid vs Barcelona",
+        "Real Madrid": "Barcelona vs Real Madrid",
         "Barcelona": "Atl\u00e9tico vs Athletic",
-        "Ponferradina": "Cultural Leonesa vs Ponferradina"
+        "Ponferradina": "Cultural Leonesa vs Real Sociedad B"
     },
     "horarios": {
         "Real Madrid": {
@@ -15,7 +15,7 @@
         },
         "Ponferradina": {
             "fecha": "2025-05-10",
-            "hora": "19:00"
+            "hora": "22:00"
         }
     },
     "resultados": {
