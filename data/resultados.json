@@ -1,29 +1,29 @@
 {
     "partidos": {
-        "Real Madrid": "Real Madrid vs Celta",
-        "Barcelona": "Real Valladolid vs Barcelona",
-        "Ponferradina": "Ponferradina vs Bilbao Athletic"
+        "Real Madrid": "Real Madrid vs Atl\u00e9tico",
+        "Barcelona": "Barcelona vs Villarreal",
+        "Ponferradina": "sociedad-deportiva-ponferradina vs athletic-club-bilbao-ii"
     },
     "horarios": {
         "Real Madrid": {
-            "fecha": "2025-05-04",
-            "hora": "16:00"
+            "fecha": "2025-05-05",
+            "hora": "22:00"
         },
         "Barcelona": {
-            "fecha": "2025-05-03",
-            "hora": "23:00"
+            "fecha": "2025-05-05",
+            "hora": "22:00"
         },
         "Ponferradina": {
-            "fecha": "2025-05-03",
-            "hora": "18:00"
+            "fecha": "2025-05-05",
+            "hora": "22:30"
         }
     },
     "resultados": {
         "Real Madrid": "",
         "Barcelona": "",
-        "Ponferradina": ""
+        "Ponferradina": "2"
     },
     "overrides": {
-        "Ponferradina": "https://es.soccerway.com/matches/2025/05/03/spain/segunda-b/sociedad-deportiva-ponferradina/athletic-club-bilbao-ii/4453947/"
+        "Ponferradina": "https://es.soccerway.com/matches/2025/05/05/spain/segunda-b/sociedad-deportiva-ponferradina/athletic-club-bilbao-ii/4453947/"
     }
 }
