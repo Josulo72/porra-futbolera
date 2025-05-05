@@ -7,15 +7,15 @@
     "horarios": {
         "Real Madrid": {
             "fecha": "2025-05-04",
-            "hora": "18:00"
+            "hora": "22:00"
         },
         "Barcelona": {
             "fecha": "2025-05-03",
-            "hora": "23:30"
+            "hora": "23:15"
         },
         "Ponferradina": {
             "fecha": "2025-05-03",
-            "hora": "19:00"
+            "hora": "20:00"
         }
     },
     "resultados": {
