@@ -19,9 +19,9 @@
         }
     },
     "resultados": {
-        "Real Madrid": "",
-        "Barcelona": "",
-        "Ponferradina": ""
+        "Real Madrid": "3-2",
+        "Barcelona": "1-2",
+        "Ponferradina": "1"
     },
     "overrides": {
         "Real Madrid": "https://es.soccerway.com/matches/2025/05/04/spain/primera-division/real-madrid-club-de-futbol/real-club-celta-de-vigo/4367678/",
