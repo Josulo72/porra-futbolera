@@ -1,31 +1,31 @@
 {
     "partidos": {
-        "Real Madrid": "rayo-vallecano vs getafe-club-de-futbol",
-        "Barcelona": "deportivo-alaves vs club-atletico-de-madrid",
-        "Ponferradina": "sociedad-deportiva-ponferradina vs athletic-club-bilbao-ii"
+        "Real Madrid": "futbol-club-barcelona vs real-madrid-club-de-futbol",
+        "Barcelona": "club-atletico-de-madrid vs real-sociedad-de-futbol",
+        "Ponferradina": "real-sociedad-de-futbol-ii vs sociedad-deportiva-ponferradina"
     },
     "horarios": {
         "Real Madrid": {
-            "fecha": "2025-05-04",
-            "hora": "23:00"
+            "fecha": "2025-05-11",
+            "hora": "18:15"
         },
         "Barcelona": {
-            "fecha": "2025-05-04",
+            "fecha": "2025-05-10",
             "hora": "23:00"
         },
         "Ponferradina": {
-            "fecha": "2025-05-03",
-            "hora": "18:00"
+            "fecha": "2025-05-11",
+            "hora": "17:30"
         }
     },
     "resultados": {
-        "Real Madrid": "1-0",
-        "Barcelona": "0-0",
-        "Ponferradina": "1"
+        "Real Madrid": "",
+        "Barcelona": "",
+        "Ponferradina": ""
     },
     "overrides": {
-        "Real Madrid": "https://es.soccerway.com/matches/2025/05/02/spain/primera-division/rayo-vallecano/getafe-club-de-futbol/4367679/",
-        "Barcelona": "https://es.soccerway.com/matches/2025/05/03/spain/primera-division/deportivo-alaves/club-atletico-de-madrid/4367674/",
-        "Ponferradina": "https://es.soccerway.com/matches/2025/05/03/spain/segunda-b/sociedad-deportiva-ponferradina/athletic-club-bilbao-ii/4453947/"
+        "Real Madrid": "https://es.soccerway.com/matches/2025/05/11/spain/primera-division/futbol-club-barcelona/real-madrid-club-de-futbol/4367683/",
+        "Barcelona": "https://es.soccerway.com/national/spain/primera-division/20242025/regular-season/r82318/#google_vignette",
+        "Ponferradina": "https://es.soccerway.com/matches/2025/05/11/spain/segunda-b/real-sociedad-de-futbol-ii/sociedad-deportiva-ponferradina/4453956/"
     }
 }
