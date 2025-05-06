@@ -1,16 +1,16 @@
 {
     "partidos": {
-        "Real Madrid": "real-madrid-club-de-futbol vs real-club-celta-de-vigo",
-        "Barcelona": "real-valladolid-club-de-futbol vs futbol-club-barcelona",
+        "Real Madrid": "rayo-vallecano vs getafe-club-de-futbol",
+        "Barcelona": "deportivo-alaves vs club-atletico-de-madrid",
         "Ponferradina": "sociedad-deportiva-ponferradina vs athletic-club-bilbao-ii"
     },
     "horarios": {
         "Real Madrid": {
             "fecha": "2025-05-04",
-            "hora": "16:00"
+            "hora": "23:00"
         },
         "Barcelona": {
-            "fecha": "2025-05-03",
+            "fecha": "2025-05-04",
             "hora": "23:00"
         },
         "Ponferradina": {
@@ -19,13 +19,13 @@
         }
     },
     "resultados": {
-        "Real Madrid": "3-2",
-        "Barcelona": "1-2",
-        "Ponferradina": "1"
+        "Real Madrid": "",
+        "Barcelona": "",
+        "Ponferradina": ""
     },
     "overrides": {
-        "Real Madrid": "https://es.soccerway.com/matches/2025/05/04/spain/primera-division/real-madrid-club-de-futbol/real-club-celta-de-vigo/4367678/",
-        "Barcelona": "https://es.soccerway.com/matches/2025/05/03/spain/primera-division/real-valladolid-club-de-futbol/futbol-club-barcelona/4367677/",
+        "Real Madrid": "https://es.soccerway.com/matches/2025/05/02/spain/primera-division/rayo-vallecano/getafe-club-de-futbol/4367679/",
+        "Barcelona": "https://es.soccerway.com/matches/2025/05/03/spain/primera-division/deportivo-alaves/club-atletico-de-madrid/4367674/",
         "Ponferradina": "https://es.soccerway.com/matches/2025/05/03/spain/segunda-b/sociedad-deportiva-ponferradina/athletic-club-bilbao-ii/4453947/"
     }
 }
