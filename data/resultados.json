@@ -19,9 +19,9 @@
         }
     },
     "resultados": {
-        "Real Madrid": "",
-        "Barcelona": "",
-        "Ponferradina": ""
+        "Real Madrid": "1-0",
+        "Barcelona": "0-0",
+        "Ponferradina": "1"
     },
     "overrides": {
         "Real Madrid": "https://es.soccerway.com/matches/2025/05/02/spain/primera-division/rayo-vallecano/getafe-club-de-futbol/4367679/",
